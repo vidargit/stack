@@ -42,3 +42,8 @@ class Stack:
 
 	def dump(self) -> int:
 		print(list(self.__stk))
+
+	def extend(self, max_len) -> None:
+		tmp = deque([], max_len)
+		tmp.extendleft(self.__stk)
+		self.__stk = tmp.copy()
